@@ -1,0 +1,22 @@
+<template>
+  <div draggable="true" ondragstart={handleDrag}>
+    <lightning-card icon-name="standard:task">
+      <div class="slds-card__body slds-card__body_inner">
+        <lightning-button
+          variant="base"
+          label={order.Name}
+          onclick={handleViewRecord}
+          value={order.Id}
+        ></lightning-button>
+      </br>
+        <lightning-formatted-number
+          value={order.Amount__c}
+          currency-code="USD"
+          currency-display-as="code"
+          format-style="currency"
+        >
+        </lightning-formatted-number>
+      </div>
+    </lightning-card>
+  </div>
+</template>

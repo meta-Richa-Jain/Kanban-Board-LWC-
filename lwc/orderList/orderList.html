@@ -1,0 +1,36 @@
+<template>
+  <div
+    class="slds-box slds-align_absolute-center slds-text-heading_small stage-container"
+  >
+    {header}
+  </div>
+  <div
+    class="slds-box slds-align_absolute-center slds-text-heading_small amount-container"
+  >
+    <lightning-formatted-number
+      value={amount}
+      currency-code="USD"
+      currency-display-as="code"
+      format-style="currency"
+    >
+    </lightning-formatted-number>
+  </div>
+  <div
+    class="droppable drop-container slds-col"
+    ondragover={handleDragOver}
+    ondrop={handleDrop}
+  >
+    <lightning-layout>
+      <lightning-layout-item padding="around-small" flexibility="auto">
+        <template for:each={orderlist} for:item="order">
+          <c-order-card
+            key={order.Id}
+            order={order}
+            onitemdrag={handleItemDrag}
+          >
+          </c-order-card>
+        </template>
+      </lightning-layout-item>
+    </lightning-layout>
+  </div>
+</template>

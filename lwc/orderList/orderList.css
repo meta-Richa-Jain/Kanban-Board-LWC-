@@ -1,0 +1,18 @@
+.drop-container {
+  border: 1px solid;
+  width: 300px;
+  margin: 12px;
+}
+
+.stage-container {
+  background-color: #4682b4;
+  border: 1px solid;
+  width: 300px;
+  margin: 12px;
+}
+
+.amount-container {
+  border: 1px solid;
+  width: 300px;
+  margin: 12px;
+}

@@ -1,0 +1,36 @@
+<template>
+  <section class="slds-grid slds-gutters main-container">
+    <c-order-list
+      orderlist={inProgressOrders}
+      stage={status.inProgress}
+      amount={inProgressAmount}
+      onlistitemdrag={handleListItemDrag}
+      onitemdrop={handleItemDrop}
+    >
+    </c-order-list>
+    <c-order-list
+      orderlist={shippedOrders}
+      stage={status.shipped}
+      amount={shippedAmount}
+      onlistitemdrag={handleListItemDrag}
+      onitemdrop={handleItemDrop}
+    >
+    </c-order-list>
+    <c-order-list
+      orderlist={completedOrders}
+      stage={status.completed}
+      amount={completedAmount}
+      onlistitemdrag={handleListItemDrag}
+      onitemdrop={handleItemDrop}
+    >
+    </c-order-list>
+    <c-order-list
+      orderlist={canceledOrders}
+      stage={status.canceled}
+      amount={canceledAmount}
+      onlistitemdrag={handleListItemDrag}
+      onitemdrop={handleItemDrop}
+    >
+    </c-order-list>
+  </section>
+</template>
